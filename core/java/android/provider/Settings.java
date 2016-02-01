@@ -3521,6 +3521,11 @@ public final class Settings {
          * Whether lock-to-app will be triggered by long-press on recents.
          * @hide
          */
+         /**
+         * Enable double tap gesture on the top third or the bottom shortcut area to sleep
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_LOCK_SCREEN = "double_tap_sleep_lock_screen";
         public static final String LOCK_TO_APP_ENABLED = "lock_to_app_enabled";
 
         /** @hide */
@@ -3933,7 +3938,7 @@ public final class Settings {
          * Enable double tap gesture anywhere on the lock screen put device to sleep
          * @hide
          */
-        public static final String DOUBLE_TAP_SLEEP_LOCK_SCREEN = "double_tap_sleep_lock_screen";
+   
 
        /**
         * MediaScanner behavior on boot.

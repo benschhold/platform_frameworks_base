@@ -43,6 +43,7 @@ import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.os.UserHandle;
 import android.view.ViewConfiguration;
 import android.view.ViewRootImpl;
 import android.view.WindowManager;
@@ -217,6 +218,14 @@ public class StatusBarWindowView extends FrameLayout {
             if (DEBUG) Log.w(TAG, "logging lock screen double tap gesture");
             mDoubleTapGesture.onTouchEvent(ev);
         }
+      final int h = getMeasuredHeight();
+      if (mDoubleTapToSleepLockScreen &&
+             mService.getBarState() == StatusBarState.KEYGUARD
+             && (ev.getY() < (h / 3) ||
+             ev.getY() > (h - mStatusBarHeaderHeight))) {
+         if (DEBUG) Log.w(TAG, "logging lock screen double tap gesture");
+            mDoubleTapGesture.onTouchEvent(ev);
+        }
         if (mNotificationPanel.isFullyExpanded()
                 && mStackScrollLayout.getVisibility() == View.VISIBLE
                 && mService.getBarState() == StatusBarState.KEYGUARD
@@ -319,6 +328,8 @@ public class StatusBarWindowView extends FrameLayout {
                     CMSettings.System.DOUBLE_TAP_SLEEP_GESTURE), false, this);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.DOUBLE_TAP_SLEEP_LOCK_SCREEN), false, this);
+          resolver.registerContentObserver(Settings.System.getUriFor(
+                Settings.System.DOUBLE_TAP_SLEEP_LOCK_SCREEN), false, this, UserHandle.USER_ALL);
             update();
         }
 
