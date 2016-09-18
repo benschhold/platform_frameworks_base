@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Copyright (C) 2016 RR
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License. 
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="default_string">Default</string>
+
+    <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
+    <string name="system_error_vendorprint">Your vendor image does not match the system. Please flash the <xliff:g id="string">%s</xliff:g> vendor image for your device</string>
+
+    <string name="global_action_screenrecord">Screenrecord</string>
+
+    <!-- AOKP custom system animations -->
+    <string name="animation_fade">Fade</string>
+    <string name="animation_slide_right">Slide in right</string>
+    <string name="animation_slide_left">Slide in left</string>
+    <string name="animation_slide_right_no_fade">Slide in right (No fade)</string>
+    <string name="animation_slide_left_no_fade">Slide in left (No fade)</string>
+    <string name="animation_slide_up">Slide in bottom</string>
+    <string name="animation_slide_down">Slide in top</string>
+    <string name="animation_default">Default</string>
+    <string name="animation_translucent">Translucent</string>
+    <string name="animation_grow_shrink">Grow in (Top)</string>
+    <string name="animation_grow_shrink_center">Grow in (Center)</string>
+    <string name="animation_grow_shrink_bottom">Grow in (Bottom)</string>
+    <string name="animation_grow_shrink_left">Grow in (Left)</string>
+    <string name="animation_grow_shrink_right">Grow in (Right)</string>
+    <string name="action_null">Blank</string>
+<<<<<<< HEAD:core/res/res/values/rr_strings.xml
+    <string name="global_action_torch">Flashlight</string>
+
+    <!-- Button to soft reboot the device, within the Reboot Options dialog -->
+    <string name="reboot_systemui">Restart SystemUI</string>
+
+    <!-- On-The-Go -->
+    <string name="global_action_onthego">On-The-Go Mode</string>
+
+    <!-- ADB enabled, but not connected notification title -->
+    <string name="adb_not_connected_notification_title">ADB inactive</string>
+    <string name="adb_active_custom_tile_not_connected">inactive</string>
+
+    <string name="singlehandmode_click_hint_message">Touch outside the screen to exit mini screen view</string>
+    <string name="singlehandmode_slide_hint_message">Slide your finger across the navigation bar to switch between the standard and mini screen views</string>
+
+=======
+
+    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_modifyOverlays">Modify theme overlays</string>
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_modifyOverlays">Allows the app to make modifications to theme overlays using OverlayManagerService</string>
+>>>>>>> e7808fd... OMS: Introduce MODIFY_OVERLAYS permission for user apps:core/res/res/values/cr_strings.xml
+</resources>
